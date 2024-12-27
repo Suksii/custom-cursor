@@ -1,0 +1,38 @@
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: '20px';
+    background-color:khaki
+}
+
+.container {
+    position: relative;
+}
+
+h1 {
+    font-size: 8rem;
+}
+
+button{
+    background-color:firebrick;
+    color: white;
+    border: none;
+    outline: none;
+    font-size: 2rem;
+    padding: 2rem 1.5rem;
+}
+button:focus {
+    outline: none;
+}
+
+.custom-cursor {
+    position: fixed;
+    cursor: none;
+    width: 40px;
+    height: 40px;
+    background-color: black;
+    border-radius: 100%;
+}
