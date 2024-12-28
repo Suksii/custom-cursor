@@ -1,43 +1,86 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 .container {
-    position: relative;
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    gap: '20px';
-    background-color:khaki;
-    cursor: none;
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: "20px";
+  cursor: none;
+}
+.text-section {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+  background-color: khaki;
+}
+.button-section {
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+  background-color: cyan;
 }
 
 .text {
-    font-size: 120px;
-    cursor: none;
-    color: #2A004E
-}
-.text h1 {
-    z-index: 20;
+  font-size: 120px;
+  cursor: none;
+  color: #2a004e;
 }
 
-button{
-    background-color:firebrick;
-    color: white;
-    border: none;
-    outline: none;
-    font-size: 2rem;
-    padding: 2rem 1.5rem;
+button {
+  background-color: firebrick;
+  color: white;
+  border: none;
+  outline: none;
+  font-size: 2rem;
+  padding: 2rem 1.5rem;
 }
 button:focus {
-    outline: none;
+  outline: none;
 }
 
-.custom-cursor {
-    position: fixed;
-    pointer-events: none;
-    border-radius: 100%;
-    transition: font-size 1s;
-    background-color: khaki;
-    /* mix-blend-mode: difference; */
+.custom-cursor-text {
+  position: fixed;
+  pointer-events: none;
+  border-radius: 100%;
+  transition: font-size 1s;
+  background-color: khaki;
+}
+.custom-cursor-button {
+  position: fixed;
+  pointer-events: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  border: 1px solid khaki;
+  translate: -50% -50%;
+  transition-duration: 0.2ms;
+  transition-timing-function: ease-out;
+  animation: cursorAnimation 0.5s infinite alternate;
+}
+/* 
+.custom-cursor-button::after {
+  content: "";
+  width: 30px;
+  height: 30px;
+} */
+
+@keyframes cursorAnimation {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0.8);
+  }
 }
