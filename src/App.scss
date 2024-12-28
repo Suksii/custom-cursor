@@ -4,6 +4,11 @@
   padding: 0;
 }
 
+$primary: #2a004e;
+$text-section-bg: khaki;
+$button-section-bg: azure;
+$button-bg: red;
+
 .container {
   position: relative;
   height: 100vh;
@@ -15,39 +20,45 @@
   text-align: center;
   gap: "20px";
   cursor: none;
-}
-.text-section {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  align-items: center;
-  background-color: khaki;
-}
-.button-section {
-  height: 50%;
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  align-items: center;
-  background-color: azure;
-}
 
-.text {
-  font-size: 120px;
-  cursor: none;
-  color: #2a004e;
-}
+  .text-section {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    background-color: $text-section-bg;
 
-button {
-  background-color: red;
-  color: white;
-  border: none;
-  outline: none;
-  font-size: 2rem;
-  padding: 2rem 1.5rem;
-}
-button:focus {
-  outline: none;
+    .text {
+      font-size: 120px;
+      cursor: none;
+      color: $primary;
+
+      @media (max-width: 768px) {
+        font-size: 80px;
+      }
+    }
+  }
+  .button-section {
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    background-color: $button-section-bg;
+
+    button {
+      background-color: $button-bg;
+      color: $button-section-bg;
+      border: none;
+      outline: none;
+      cursor: none;
+      font-size: 2rem;
+      padding: 2rem 1.5rem;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
 }
 
 .custom-cursor-text {
@@ -56,7 +67,7 @@ button:focus {
   border-radius: 100%;
   translate: -50% -50%;
   transition: font-size 1s;
-  background-color: khaki;
+  background-color: $text-section-bg;
 }
 .custom-cursor-button {
   position: fixed;
@@ -64,18 +75,13 @@ button:focus {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  border: 2px solid #2a004e;
+  border: 2px solid $primary;
   transform: translate(-50%, -50%);
-  background: radial-gradient(circle, #2a004e 0%, transparent 60%);
+  background: radial-gradient(circle, $primary 0%, transparent 60%);
   animation: rotatePulse 1.5s infinite ease-in-out;
 }
-
-button {
-  cursor: none;
-}
-
 .clicked {
-  background: radial-gradient(circle, white 0%, #2a004e 60%);
+  background: radial-gradient(circle, white 0%, $primary 60%);
   animation: clickedEffect 0.6s forwards;
 }
 

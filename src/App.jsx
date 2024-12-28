@@ -1,10 +1,9 @@
 import { useEffect, useState } from "react";
-import "./App.css";
+import "./App.scss";
 
 const App = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [isTextHovered, setIsTextHovered] = useState(false);
-  const [isButtonHovered, setIsButtonHovered] = useState(false);
   const [isButtonClicked, setIsButtonClicked] = useState(false);
   const [isTextSectionHovered, setIsTextSectionHovered] = useState(false);
   const [isButtonSectionHovered, setIsButtonSectionHovered] = useState(false);
@@ -61,6 +60,12 @@ const App = () => {
             }}
           />
         )}
+      </div>
+      <div
+        className="button-section"
+        onMouseEnter={handleMouseButtonSectionEnter}
+        onMouseLeave={handleMouseButtonSectionLeave}
+      >
         {isButtonSectionHovered && (
           <div
             className={`custom-cursor-button ${
@@ -75,12 +80,6 @@ const App = () => {
             }}
           />
         )}
-      </div>
-      <div
-        className="button-section"
-        onMouseEnter={handleMouseButtonSectionEnter}
-        onMouseLeave={handleMouseButtonSectionLeave}
-      >
         <button onClick={handleButtonClick}>Click on me!</button>
       </div>
     </div>
