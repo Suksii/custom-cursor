@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { motion, transform } from "framer-motion";
 import "./App.css";
 
 const App = () => {
@@ -21,21 +22,25 @@ const App = () => {
   return (
     <div className="container">
       <h1
-        className=""
+        className="text"
         onMouseEnter={handleMouseTextEnter}
         onMouseLeave={handleMouseTextLeave}
       >
         Hover over this text!
       </h1>
-      <button className="">Hover over me!</button>
+
+      <button className="">Click on me!</button>
       <div
         className="custom-cursor"
         style={{
-          width: isTextHovered ? "140px" : "40px",
-          height: isTextHovered ? "140px" : "40px",
+          width: isTextHovered ? "100px" : "40px",
+          height: isTextHovered ? "100px" : "40px",
+          mixBlendMode: "difference",
+          backgroundColor: "#ccc",
           left: `${mousePosition.x}px`,
           top: `${mousePosition.y}px`,
           transform: "translate(-50%, -50%)",
+          transition: "width 0.3s, height 0.3s, background-color 0.3s"
         }}
       />
     </div>

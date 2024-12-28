@@ -12,9 +12,13 @@
     cursor: none;
 }
 
-h1 {
-    font-size: 8rem;
+.text {
+    font-size: 120px;
     cursor: none;
+    color: #2A004E
+}
+.text h1 {
+    z-index: 20;
 }
 
 button{
@@ -32,8 +36,8 @@ button:focus {
 .custom-cursor {
     position: fixed;
     pointer-events: none;
-    width: 40px;
-    height: 40px;
-    background-color: black;
     border-radius: 100%;
+    transition: font-size 1s;
+    background-color: khaki;
+    /* mix-blend-mode: difference; */
 }
