@@ -29,7 +29,7 @@
   justify-content: center;
   width: 100%;
   align-items: center;
-  background-color: cyan;
+  background-color: azure;
 }
 
 .text {
@@ -39,7 +39,7 @@
 }
 
 button {
-  background-color: firebrick;
+  background-color: red;
   color: white;
   border: none;
   outline: none;
@@ -54,33 +54,54 @@ button:focus {
   position: fixed;
   pointer-events: none;
   border-radius: 100%;
+  translate: -50% -50%;
   transition: font-size 1s;
   background-color: khaki;
 }
 .custom-cursor-button {
   position: fixed;
   pointer-events: none;
-  width: 30px;
-  height: 30px;
-  border-radius: 100%;
-  border: 1px solid khaki;
-  translate: -50% -50%;
-  transition-duration: 0.2ms;
-  transition-timing-function: ease-out;
-  animation: cursorAnimation 0.5s infinite alternate;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #2a004e;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle, #2a004e 0%, transparent 60%);
+  animation: rotatePulse 1.5s infinite ease-in-out;
 }
-/* 
-.custom-cursor-button::after {
-  content: "";
-  width: 30px;
-  height: 30px;
-} */
 
-@keyframes cursorAnimation {
-  from {
-    transform: scale(1);
+button {
+  cursor: none;
+}
+
+.clicked {
+  background: radial-gradient(circle, white 0%, #2a004e 60%);
+  animation: clickedEffect 0.6s forwards;
+}
+
+@keyframes rotatePulse {
+  0% {
+    transform: translate(-50%, -50%) scale(1) rotate(0deg);
   }
-  to {
-    transform: scale(0.8);
+  50% {
+    transform: translate(-50%, -50%) scale(1.2) rotate(45deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1) rotate(360deg);
+  }
+}
+
+@keyframes clickedEffect {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(2);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
   }
 }

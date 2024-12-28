@@ -57,14 +57,15 @@ const App = () => {
               mixBlendMode: "difference",
               left: `${mousePosition.x}px`,
               top: `${mousePosition.y}px`,
-              transform: "translate(-50%, -50%)",
               transition: "width 0.3s, height 0.3s, background-color 0.3s",
             }}
           />
         )}
         {isButtonSectionHovered && (
           <div
-            className="custom-cursor-button"
+            className={`custom-cursor-button ${
+              isButtonClicked ? "clicked" : ""
+            }`}
             style={{
               width: isTextHovered ? "100px" : "40px",
               height: isTextHovered ? "100px" : "40px",
