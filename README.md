@@ -10,9 +10,9 @@
 - **JavaScript:** map, filter, window.addEventListener, window.removeEventListener, event(clientX, clientY), setTimeout
 
 ## Installation
-Create a folder on the desktop: mkdir MyProject
-Navigate to the desktop folder: cd %USERPROFILE%/Desktop/MyProject
-Clone the repository: git clone "https://github.com/Suksii/custom-cursor.git"
-Find the location: cd custom-cursor
-Install dependencies: npm install
-Run the application: npm run dev
+1. Create a folder on the desktop: `mkdir MyProject` 
+2. Navigate to the desktop folder: `cd %USERPROFILE%/Desktop/MyProject`
+3. Clone the repository: `git clone "https://github.com/Suksii/custom-cursor.git"`
+4. Navigate to the cloned project folder: `cd custom-cursor`
+5. Install dependencies: `npm install`
+6. Run the application: `npm run dev`
