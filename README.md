@@ -7,7 +7,7 @@
   - `useState, useEffect`
   - `SASS`
  
-- **JavaScript:** map, filter, window.addEventListener, window.removeEventListener, event(clientX, clientY), setTimeout
+- **JavaScript:** map, filter, window.addEventListener, window.removeEventListener, event.clientX, event.clientY), setTimeout
 
 ## Installation
 1. Create a folder on the desktop: `mkdir MyProject` 
