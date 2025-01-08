@@ -1,6 +1,7 @@
 # Custom cursors
 
-## This project is a web project built in React, showing two different custom-made cursors, one for text and other for button. Built using Javascript and SASS. 
+## About
+ This project is a web project built in React, showing two different custom-made cursors, one for text and other for button. Built using Javascript and SASS. 
 
 ## Technical Details
 - **React.js:**
